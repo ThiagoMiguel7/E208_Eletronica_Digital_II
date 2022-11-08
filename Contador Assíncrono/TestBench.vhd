@@ -43,7 +43,7 @@ ARCHITECTURE behavior OF TestBench IS
     PORT(
          Clock : IN  std_logic;
          Reset : IN  std_logic;
-         Output : buffer integer range 10 to 15
+         Output : buffer integer range 0 to 15
         );
     END COMPONENT;
     
@@ -53,7 +53,7 @@ ARCHITECTURE behavior OF TestBench IS
    signal Reset : std_logic := '0';
 
  	--Outputs
-   signal Output : integer range 10 to 15;
+   signal Output : integer range 0 to 15;
 
  
  
@@ -200,10 +200,6 @@ BEGIN
 		Clock <= '0'; 
       wait for 100 ns;
 		
-		
-		
-    
-
       -- insert stimulus here 
 
       wait;
